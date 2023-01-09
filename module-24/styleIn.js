@@ -8,9 +8,9 @@ for (const section of sections) {
 
 }
 
-// const placesContainer = document.getElementById('places-container');
+const placesContainer = document.getElementById('places-container');
 
-// placesContainer.style.backgroundColor = 'yellow'
+placesContainer.style.backgroundColor = 'yellow'
 
 const placesContainer = document.getElementById('places-container');
-// placesContainer.classList.add('yellow-bg');
+placesContainer.classList.add('yellow-bg');
