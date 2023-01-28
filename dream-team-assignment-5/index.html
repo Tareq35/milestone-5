@@ -14,7 +14,7 @@
     <nav>
         <div class="navbar bg-neutral text-neutral-content">
             <div class="flex-1">
-                <a class="btn btn-ghost normal-case text-xl text-orange-600"><span class="text-yellow-400">Dream</span>
+                <a class="btn btn-ghost normal-case text-3xl text-orange-600"><span class="text-yellow-400">Dream</span>
                     Team</a>
             </div>
             <div class="flex-none">
@@ -38,7 +38,7 @@
     </header>
     <main class="mb-5">
         <section class="w-[80%] flex gap-4 mx-auto">
-            <div class="w-[80%] mx-auto grid grid-cols-3 gap-7">
+            <div class="w-[75%] mx-auto grid grid-cols-3 gap-7">
                 <div class="card w-full bg-base-300 shadow-xl">
                     <figure><img class="w-full" src="./images/players/messi.png" alt="" /></figure>
                     <div class="card-body">
@@ -46,7 +46,7 @@
                         <p><span class="font-medium">50 Goals</span> - <span class="font-medium">120
                                 Assists</span></p>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary">Select</button>
+                            <button class="w-full btn btn-primary " onclick="addPlayers(this)" >Select</button>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <p><span class="font-medium">30 Goals</span> - <span class="font-medium">50
                                 Assists</span></p>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary">Select</button>
+                            <button class="w-full btn btn-primary " onclick="addPlayers(this)" >Select</button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <p><span class="font-medium">45 Goals</span> - <span class="font-medium">30
                                 Assists</span></p>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary">Select</button>
+                            <button class="w-full btn btn-primary " onclick="addPlayers(this)" >Select</button>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                         <p><span class="font-medium">10 Goals</span> - <span class="font-medium">2
                                 Assists</span></p>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary">Select</button>
+                            <button class="w-full btn btn-primary " onclick="addPlayers(this)" >Select</button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                         <p><span class="font-medium">12 Goals</span> - <span class="font-medium">12
                                 Assists</span></p>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary">Select</button>
+                            <button class="w-full btn btn-primary " onclick="addPlayers(this)" >Select</button>
                         </div>
                     </div>
                 </div>
@@ -101,13 +101,48 @@
                         <p><span class="font-medium">5 Goals</span> - <span class="font-medium">10
                                 Assists</span></p>
                         <div class="card-actions justify-center">
-                            <button class="btn btn-primary">Select</button>
+                            <button class="w-full btn btn-primary " onclick="addPlayers(this)" >Select</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="w-[20%]">
+            <div class="w-[25%] mx-auto grid grid-cols-1 gap-7">
+                <div>
+                    <div class="card w-[90%] mx-auto bg-neutral text-primary-content">
+                        <div class="card-body">
+                            <h2 class="card-title text-2xl justify-center">Selected - V</h2>
+                            <div id="add-player">
+                                
+                            </div>
+                            <!-- <div class="flex">
+                                <p>1.</p>
+                                <p>Lionel Messi</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card w-[90%] mx-auto bg-neutral text-primary-content">
+                        <div class="card-body p-7">
+                            <h2 class="card-title text-2xl justify-center">Budget</h2>
 
+                            <p>per player : <input class="text-black w-full rounded-lg p-2" type="number" name="" id="per-player-amount"></p>
+                            
+                            <button class="btn btn-primary my-3" id="players-budget">CALCULATE</button>
+
+                            <p>Player Expenses $<span id="player-expense">0</span></p>
+
+                            <p class="mt-5">Manager : <input class="text-black w-full rounded-lg p-2" type="number" name="" id="manager-budget">
+                            </p>
+
+                            <p>Coach : <input id="coach-budget" class="text-black w-full rounded-lg p-2" type="number"></p>
+
+                            <button id="total-budget" class="btn btn-primary my-3">CALCULATE Total</button>
+
+                            <p class="mt-4 pb-4">Total $<span id="total">0</span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -137,7 +172,10 @@
         </div>
     </footer>
 
-
+<script src="./js/addPlayers.js"></script>
+<script src="./js/playerBudgetCalculate.js"></script>
+<script src="./js/utilities.js"></script>
+<script src="./js/totalBudget.js"></script>
 </body>
 
 </html>
